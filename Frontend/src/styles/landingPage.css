@@ -1,0 +1,162 @@
+/* ===== Landing Page Container ===== */
+.landingPageContainer {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(120deg, #f8f9fa, #e0f7fa);
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Navbar ===== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 3rem;
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navHeader h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1976d2;
+  margin: 0;
+}
+
+.navlist {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.navlist p,
+.navlist div {
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.navlist p:hover,
+.navlist div:hover {
+  color: #ff6f00;
+}
+
+/* ===== Main Container ===== */
+.landingMainContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 6rem;
+  height: 100%;
+  gap: 5vw;
+}
+
+/* ===== Left Text Panel ===== */
+.landingMainContainer > div:first-child {
+  flex: 1;
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.landingMainContainer h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.landingMainContainer p {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.landingMainContainer div[role="button"] {
+  background: #1976d2;
+  width: fit-content;
+  border-radius: 30px;
+  padding: 0.8rem 2rem;
+  transition: background 0.3s;
+}
+
+.landingMainContainer div[role="button"]:hover {
+  background: #0d47a1;
+}
+
+.landingMainContainer div[role="button"] a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* ===== Right Image Panel ===== */
+.landingMainContainer > div:last-child {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: fadeInRight 1s ease-in-out;
+}
+
+.landingMainContainer img {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .landingMainContainer {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .landingMainContainer > div {
+    width: 100%;
+  }
+
+  .landingMainContainer img {
+    width: 80%;
+  }
+
+  .navlist {
+    gap: 1rem;
+  }
+
+  nav {
+    padding: 1rem 2rem;
+  }
+}

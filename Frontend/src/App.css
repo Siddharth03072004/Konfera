@@ -1,0 +1,91 @@
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navBar h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.navBar p {
+  margin-left: 8px;
+  margin-right: 20px;
+  color: #555;
+  font-weight: 500;
+}
+
+.meetContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+  padding: 40px;
+  gap: 10vw;
+  background: linear-gradient(to right, #f9f9f9, #e3f2fd);
+}
+
+.leftPanel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.leftPanel h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.leftPanel .MuiTextField-root {
+  background: white;
+  border-radius: 8px;
+}
+
+.leftPanel button {
+  padding: 10px 24px;
+  font-weight: 600;
+  text-transform: none;
+  border-radius: 8px;
+}
+
+.rightPanel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightPanel > img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive improvements */
+@media (max-width: 900px) {
+  .meetContainer {
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .leftPanel h2 {
+    text-align: center;
+  }
+
+  .rightPanel > img {
+    width: 80%;
+  }
+}
